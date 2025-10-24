@@ -12,6 +12,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.card {
+    background-color: #F9DBBA;
+    width: 100%; /* Asegura que las cards llenen la celda */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacio uniforme entre elementos */
+}
 
 a {
   font-weight: 500;

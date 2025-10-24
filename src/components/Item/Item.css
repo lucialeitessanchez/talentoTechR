@@ -1,0 +1,41 @@
+
+.product-item .product-title {
+  color: #333; /* Color oscuro para el título */
+  font-size: 1.5em; /* Tamaño de fuente grande */
+  margin-top: 0; /* Elimina el margen superior por defecto */
+}
+.product-item img {
+  /* 1. La imagen nunca será más ancha que su contenedor padre (.product-item) */
+  max-width: 100%; 
+  
+  /* 2. CLAVE: Mantiene la proporción original de la imagen. */
+  /* Así evitas que se vea estirada al ajustarse al ancho. */
+  height: auto;    
+  
+  /* 3. Estilo de bloque para mejor control del espacio */
+  display: block; 
+}
+.product-item p {
+  color: #666; /* Un gris más suave para el texto */
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.product-item {
+    /* Dale un ancho para controlar el espacio que ocupa cada producto */
+  width: 300px;
+  
+  /* Añade un borde o una sombra para que se vea como una tarjeta */
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+  /* Relleno interno */
+  padding: 15px;
+  
+  /* Estilo adicional: el fondo de la tarjeta */
+  background-color: #fff;
+  
+  /* Para que las tarjetas se coloquen una al lado de la otra (si usas Flexbox o Grid en el componente padre) */
+  margin: 10px;
+  display: inline-block; /* o considera usar Flexbox/Grid en el contenedor padre */
+}

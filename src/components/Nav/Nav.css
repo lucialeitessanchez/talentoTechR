@@ -1,0 +1,66 @@
+/* --- 1. Estilo del Contenedor Principal (nav) --- */
+
+nav {
+  /* Fondo y color del texto */
+  background-color: #2c3e50; /* Un azul oscuro elegante */
+  padding: 15px 30px; 
+}
+
+/* --- 2. Estilo de la Lista de Elementos (ul) --- */
+
+nav ul {
+  /* Flexbox es CLAVE para alinear los elementos horizontalmente */
+  display: flex;
+  justify-content: flex-start; /* Alinea todo a la izquierda por defecto */
+  align-items: center; /* Centra verticalmente */
+  
+  /* Elimina los estilos de lista por defecto */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* --- 3. Estilo de Cada Elemento de la Lista (li) --- */
+
+nav ul li {
+  margin-right: 30px; /* Espacio entre cada elemento (Home, Dulce, Salado, Carrito) */
+}
+
+/* --- 4. Estilo de los Enlaces (Link) --- */
+
+nav ul li a {
+  /* Remueve el subrayado por defecto */
+  text-decoration: none;
+  color: white; /* Color del texto */
+  font-size: 1.1rem;
+  font-weight: 500;
+  
+  /* Transición para el efecto hover suave */
+  transition: color 0.3s ease;
+  position: relative; /* Necesario para posicionar el contador del carrito */
+}
+
+/* Efecto al pasar el ratón */
+nav ul li a:hover {
+  color: #f39c12; /* Un naranja de acento al pasar el mouse */
+}
+
+/* --- 5. Estilo del Widget de Carrito (Contador) --- */
+
+.in-cart {
+  /* Posicionamiento: arriba y a la derecha del texto "Carrito" */
+  position: absolute;
+  top: -10px; 
+  right: -15px; 
+  
+  /* Diseño visual */
+  background-color: #e74c3c; /* Fondo rojo */
+  color: white;
+  border-radius: 50%; /* Lo hace redondo */
+  padding: 2px 7px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  
+  /* Asegura que no se salga del borde de la pantalla si hay mucho texto */
+  line-height: 1; 
+}
