@@ -1,21 +1,22 @@
-import { Link } from "react-router-dom"
-import { useCartContext } from "../../context/CartContext/useCartContext"
+import { Link } from "react-router-dom";
+import { useCartContext } from "../../context/CartContext/useCartContext";
 
 
 export const Nav = () => {
 
     const { getTotalItems } = useCartContext();
 
-    return <nav>
+    return (
+    <nav>
         <ul>
             <li>{/* a donde se supone que va a navegar el link */}
                 <Link to={"/"}>Home</Link>
             </li>
             <li>
-                <Link to={"/category/electro"}>Electrodomesticos</Link>
+                <Link to={"/category/dulce"}>Dulce</Link>
             </li>
             <li>
-                <Link to={"/category/belleza"}>Belleza personal</Link>
+                <Link to={"/category/salado"}>Salado</Link>
             </li>
             <li>
                 <Link>Carrito</Link>
@@ -25,4 +26,5 @@ export const Nav = () => {
             </li>
         </ul>
     </nav>
-}
+    );
+};
