@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { CartContext } from "./CartContex"
+import { CartContext } from "./CartContext"
 
 export const CartProvider = ({children}) => {
-    const[cart, setCart] = useState()
+    const[cart, setCart] = useState([])
 
     const exists = (id) => {
         const exist = cart.some((p) => p.i === id);
@@ -15,7 +15,25 @@ export const CartProvider = ({children}) => {
 
         }
     setCart([...cart,item]);
+    alert(`${item.name} agregado`);
     
 };
-    return <CartContext.Provider value ={{}}>{children}</CartContext.Provider>;
+
+const clearCart = () =>{
+    setCart([]) //carrito vacio
+}
+
+const getTotalItems = () => {
+    if(cart.length){  //si el carrito tiene algo, que me lo retorne
+        return cart.length;
+    }
+};
+const values = {
+    cart, 
+    addItem,
+    clearCart,
+    getTotalItems,
+}
+
+    return <CartContext.Provider value ={values}>{children}</CartContext.Provider>;
 };
